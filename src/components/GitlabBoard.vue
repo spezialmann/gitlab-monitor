@@ -61,7 +61,7 @@
                         if (anz > 0) {
                             res.data.some(function (pipeline) {
                                 let retVal = false;
-                                (pipeline.ref === 'develop') ? retVal = true : retVal = false;
+                                (pipeline.ref === 'develop' || pipeline.ref === 'master') ? retVal = true : retVal = false;
                                 if (retVal) {
                                     //console.log(pipeline)
                                     let datum = new Date(pipeline.updated_at)
